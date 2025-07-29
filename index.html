@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muse Learning Center - Master Computer Science</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Apply Inter font globally */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom styles for smoother scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Basic spinner for loading state */
+        .spinner {
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            border-left-color: #6d28d9; /* Purple-700 */
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col">
+
+    <!-- Header Section -->
+    <header class="bg-purple-800 text-white p-4 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center px-4">
+            <h1 class="text-3xl font-extrabold mb-2 md:mb-0">Muse Learning Center</h1>
+            <nav>
+                <ul class="flex flex-wrap justify-center space-x-4 md:space-x-6">
+                    <li><a href="#home" class="hover:text-purple-200 transition duration-300 text-lg font-medium">Home</a></li>
+                    <li><a href="#about" class="hover:text-purple-200 transition duration-300 text-lg font-medium">About Us</a></li>
+                    <li><a href="#programs" class="hover:text-purple-200 transition duration-300 text-lg font-medium">Programs</a></li>
+                    <li><a href="#ai-tools" class="hover:text-purple-200 transition duration-300 text-lg font-medium">AI Tools ✨</a></li>
+                    <li><a href="#why-muse" class="hover:text-purple-200 transition duration-300 text-lg font-medium">Why Muse?</a></li>
+                    <li><a href="#contact" class="hover:text-purple-200 transition duration-300 text-lg font-medium">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main id="home" class="flex-grow container mx-auto p-6 flex items-center justify-center min-h-[calc(100vh-160px)]">
+        <div class="bg-white p-8 rounded-xl shadow-2xl text-center max-w-4xl w-full transform transition-all duration-500 hover:scale-105">
+            <h2 class="text-5xl font-extrabold text-gray-900 mb-4 leading-tight">
+                Master <span class="text-purple-700">Computer Science</span> with Muse Learning Center
+            </h2>
+            <p class="text-xl text-gray-700 mb-8">
+                Leading the way in coding, programming, and digital innovation.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="#programs" class="bg-purple-600 hover:bg-purple-800 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105 inline-block">
+                    Explore Our Tech Programs
+                </a>
+                <a href="#contact" class="bg-green-500 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105 inline-block">
+                    Enroll Today
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- About Us Section -->
+    <section id="about" class="bg-white py-16 px-6 shadow-inner">
+        <div class="container mx-auto text-center max-w-4xl">
+            <h2 class="text-4xl font-bold text-gray-800 mb-8">About Muse Learning Center</h2>
+            <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                At Muse Learning Center, we are dedicated to providing cutting-edge computer science education for all ages.
+                Our mission is to equip students with the essential skills and knowledge needed to thrive in the digital age,
+                from foundational coding to advanced programming concepts.
+            </p>
+            <p class="text-lg text-gray-600 leading-relaxed">
+                Established in 20XX, Muse Learning Center is committed to fostering innovation and problem-solving through
+                hands-on projects, expert instruction, and a dynamic curriculum designed to keep pace with technological advancements.
+                Our passionate educators are industry professionals and experienced teachers, ready to guide the next generation of tech leaders.
+            </p>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs" class="bg-gray-200 py-16 px-6">
+        <div class="container mx-auto text-center max-w-5xl">
+            <h2 class="text-4xl font-bold text-gray-800 mb-12">Our Computer Science Programs</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Program Card 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                    <h3 class="text-2xl font-semibold text-purple-700 mb-4">Coding Fundamentals</h3>
+                    <p class="text-gray-600">
+                        Introduction to programming logic, Python, and Scratch for beginners and young learners.
+                        Build a strong foundation in computational thinking.
+                    </p>
+                </div>
+                <!-- Program Card 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                    <h3 class="text-2xl font-semibold text-purple-700 mb-4">Web Development Mastery</h3>
+                    <p class="text-gray-600">
+                        Learn to build dynamic websites using HTML, CSS, JavaScript, and modern frameworks like React.
+                        From front-end design to back-end integration.
+                    </p>
+                </div>
+                <!-- Program Card 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                    <h3 class="text-2xl font-semibold text-purple-700 mb-4">AI & Machine Learning</h3>
+                    <p class="text-gray-600">
+                        Dive into the world of Artificial Intelligence, machine learning algorithms, and data science.
+                        Projects include predictive models and neural networks.
+                    </p>
+                </div>
+                <!-- New Program Card 4 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                    <h3 class="text-2xl font-semibold text-purple-700 mb-4">Game Development</h3>
+                    <p class="text-gray-600">
+                        Create your own interactive games using popular engines and programming languages.
+                        Learn game design principles and development pipelines.
+                    </p>
+                </div>
+                <!-- New Program Card 5 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                    <h3 class="text-2xl font-semibold text-purple-700 mb-4">Cybersecurity Essentials</h3>
+                    <p class="text-gray-600">
+                        Understand the fundamentals of cybersecurity, network defense, and ethical hacking.
+                        Protect digital assets and data.
+                    </p>
+                </div>
+                <!-- New Program Card 6 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                    <h3 class="text-2xl font-semibold text-purple-700 mb-4">Data Science & Analytics</h3>
+                    <p class="text-gray-600">
+                        Learn to collect, analyze, and interpret large datasets using tools like Python and R.
+                        Extract insights and make data-driven decisions.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Learning Tools Section -->
+    <section id="ai-tools" class="bg-purple-100 py-16 px-6 shadow-inner">
+        <div class="container mx-auto text-center max-w-5xl">
+            <h2 class="text-4xl font-bold text-purple-800 mb-12">✨ AI Learning Tools ✨</h2>
+            <p class="text-lg text-gray-700 mb-10">
+                Leverage the power of AI to enhance your computer science learning journey!
+            </p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                <!-- Code Explainer Tool -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border border-purple-200 flex flex-col">
+                    <h3 class="text-3xl font-bold text-purple-700 mb-6">Code Explainer ✨</h3>
+                    <p class="text-gray-600 mb-4">Paste a code snippet (e.g., Python, JavaScript) and get a simple explanation.</p>
+                    <textarea id="code-input" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 mb-4 h-40 resize-y" placeholder="Paste your code here..."></textarea>
+                    <button id="explain-code-btn" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-full shadow-md transition duration-300 transform hover:scale-105 flex items-center justify-center space-x-2">
+                        <span id="explain-code-text">Explain Code</span>
+                        <div id="explain-code-spinner" class="spinner hidden"></div>
+                    </button>
+                    <div id="code-explanation-output" class="mt-6 p-4 bg-purple-50 rounded-lg border border-purple-200 text-left text-gray-800 whitespace-pre-wrap overflow-auto max-h-60">
+                        Your explanation will appear here.
+                    </div>
+                </div>
+
+                <!-- Project Idea Generator Tool -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border border-purple-200 flex flex-col">
+                    <h3 class="text-3xl font-bold text-purple-700 mb-6">Project Idea Generator ✨</h3>
+                    <p class="text-gray-600 mb-4">Tell us your interests and get creative project ideas!</p>
+                    <input type="text" id="project-keywords" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 mb-4" placeholder="e.g., web development, beginner, game, AI">
+                    <button id="generate-project-btn" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-full shadow-md transition duration-300 transform hover:scale-105 flex items-center justify-center space-x-2">
+                        <span id="generate-project-text">Generate Ideas</span>
+                        <div id="generate-project-spinner" class="spinner hidden"></div>
+                    </button>
+                    <div id="project-ideas-output" class="mt-6 p-4 bg-purple-50 rounded-lg border border-purple-200 text-left text-gray-800 whitespace-pre-wrap overflow-auto max-h-60">
+                        Your project ideas will appear here.
+                    </div>
+                </div>
+
+                <!-- New Concept Explainer Tool -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border border-purple-200 flex flex-col lg:col-span-2">
+                    <h3 class="text-3xl font-bold text-purple-700 mb-6">Concept Explainer ✨</h3>
+                    <p class="text-gray-600 mb-4">Enter a computer science concept (e.g., "recursion", "polymorphism") for a simple explanation.</p>
+                    <input type="text" id="concept-input" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 mb-4" placeholder="e.g., What is recursion?">
+                    <button id="explain-concept-btn" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-full shadow-md transition duration-300 transform hover:scale-105 flex items-center justify-center space-x-2">
+                        <span id="explain-concept-text">Explain Concept</span>
+                        <div id="explain-concept-spinner" class="spinner hidden"></div>
+                    </button>
+                    <div id="concept-explanation-output" class="mt-6 p-4 bg-purple-50 rounded-lg border border-purple-200 text-left text-gray-800 whitespace-pre-wrap overflow-auto max-h-60">
+                        Your concept explanation will appear here.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Muse Section -->
+    <section id="why-muse" class="bg-white py-16 px-6 shadow-inner">
+        <div class="container mx-auto text-center max-w-4xl">
+            <h2 class="text-4xl font-bold text-gray-800 mb-12">Why Choose Muse for Computer Science?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="text-left">
+                    <h3 class="text-2xl font-semibold text-purple-700 mb-3">Hands-on Project-Based Learning</h3>
+                    <p class="text-gray-600 mb-4">
+                        Our curriculum emphasizes practical application. Students build real-world projects,
+                        gaining experience and a portfolio to showcase their skills.
+                    </p>
+                </div>
+                <div class="text-left">
+                    <h3 class="text-2xl font-semibold text-purple-700 mb-3">Industry-Experienced Instructors</h3>
+                    <p class="text-gray-600 mb-4">
+                        Learn from experts who are actively working in the tech industry, bringing current trends
+                        and best practices directly into the classroom.
+                    </p>
+                </div>
+                <div class="text-left">
+                    <h3 class="text-2xl font-semibold text-purple-700 mb-3">Cutting-Edge Curriculum</h3>
+                    <p class="text-gray-600 mb-4">
+                        Our courses are regularly updated to reflect the latest technologies and industry demands,
+                        ensuring students are always learning relevant skills.
+                    </p>
+                </div>
+                <div class="text-left">
+                    <h3 class="text-2xl font-semibold text-purple-700 mb-3">Supportive Tech Community</h3>
+                    <p class="text-gray-600 mb-4">
+                        Join a vibrant community of learners and mentors. Collaborate on projects, share ideas,
+                        and grow together in a supportive environment.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="bg-gray-200 py-16 px-6">
+        <div class="container mx-auto text-center max-w-4xl">
+            <h2 class="text-4xl font-bold text-gray-800 mb-12">What Our Tech Students & Parents Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-md text-left border border-gray-200">
+                    <p class="text-gray-700 italic mb-4">
+                        "Muse Learning Center ignited my son's passion for coding. He's building his own apps now,
+                        and his problem-solving skills have skyrocketed!"
+                    </p>
+                    <p class="font-semibold text-purple-700">- David S., Parent of a Coding Student</p>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-md text-left border border-gray-200">
+                    <p class="text-gray-700 italic mb-4">
+                        "The Web Development program at Muse was incredibly practical. I landed an internship
+                        shortly after completing the course, thanks to the skills I gained."
+                    </p>
+                    <p class="font-semibold text-purple-700">- Emily C., Web Dev Student</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="bg-purple-700 text-white py-16 px-6">
+        <div class="container mx-auto text-center max-w-3xl">
+            <h2 class="text-4xl font-bold mb-8">Contact Muse Learning Center</h2>
+            <p class="text-lg mb-8">
+                Ready to start your computer science journey? Fill out the form below or reach out to us directly.
+            </p>
+            <form class="bg-white p-8 rounded-xl shadow-lg text-left text-gray-800">
+                <div class="mb-4">
+                    <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name:</label>
+                    <input type="text" id="name" name="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-purple-500" placeholder="Your Name">
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email:</label>
+                    <input type="email" id="email" name="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-purple-500" placeholder="your.email@example.com">
+                </div>
+                <div class="mb-6">
+                    <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Message:</label>
+                    <textarea id="message" name="message" rows="5" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-purple-500" placeholder="Your message or inquiry..."></textarea>
+                </div>
+                <div class="flex justify-center">
+                    <button type="submit" class="bg-purple-600 hover:bg-purple-800 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+                        Send Message
+                    </button>
+                </div>
+            </form>
+            <div class="mt-12 text-center">
+                <h3 class="text-2xl font-bold mb-4">Direct Contact</h3>
+                <p class="text-lg mb-2">Address: 456 Tech Avenue, Innovation City, State 67890</p>
+                <p class="text-lg mb-2">Phone: (123) 555-CODE</p>
+                <!-- Email link with mailto: and subject -->
+                <p class="text-lg">Email: <a href="mailto:info@muselearning.com?subject=Inquiry%20from%20Muse%20Learning%20Center%20Website" class="text-white hover:underline">info@muselearning.com</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-white p-8 text-center shadow-inner mt-auto">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h4 class="text-xl font-semibold mb-4">Muse Learning Center</h4>
+                    <p class="text-gray-400">Empowering the next generation of innovators through computer science education.</p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-semibold mb-4">Quick Links</h4>
+                    <ul>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition duration-300">About Us</a></li>
+                        <li><a href="#programs" class="text-gray-400 hover:text-white transition duration-300">Programs</a></li>
+                        <li><a href="#ai-tools" class="text-gray-400 hover:text-white transition duration-300">AI Tools</a></li>
+                        <li><a href="#testimonials" class="text-gray-400 hover:text-white transition duration-300">Testimonials</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-semibold mb-4">Follow Us</h4>
+                    <div class="flex justify-center space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">Facebook</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">Twitter</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <p class="text-gray-500 text-sm">&copy; 2025 Muse Learning Center. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Get references to elements for Code Explainer
+        const codeInput = document.getElementById('code-input');
+        const explainCodeBtn = document.getElementById('explain-code-btn');
+        const explainCodeText = document.getElementById('explain-code-text');
+        const explainCodeSpinner = document.getElementById('explain-code-spinner');
+        const codeExplanationOutput = document.getElementById('code-explanation-output');
+
+        // Get references to elements for Project Idea Generator
+        const projectKeywordsInput = document.getElementById('project-keywords');
+        const generateProjectBtn = document.getElementById('generate-project-btn');
+        const generateProjectText = document.getElementById('generate-project-text');
+        const generateProjectSpinner = document.getElementById('generate-project-spinner');
+        const projectIdeasOutput = document.getElementById('project-ideas-output');
+
+        // Get references to elements for Concept Explainer
+        const conceptInput = document.getElementById('concept-input');
+        const explainConceptBtn = document.getElementById('explain-concept-btn');
+        const explainConceptText = document.getElementById('explain-concept-text');
+        const explainConceptSpinner = document.getElementById('explain-concept-spinner');
+        const conceptExplanationOutput = document.getElementById('concept-explanation-output');
+
+
+        const apiKey = ""; // API key is provided by the Canvas environment at runtime
+
+        // Function to call the Gemini API
+        async function callGeminiAPI(prompt, outputElement, textElement, spinnerElement) {
+            outputElement.textContent = ''; // Clear previous output
+            textElement.classList.add('hidden'); // Hide text
+            spinnerElement.classList.remove('hidden'); // Show spinner
+
+            try {
+                let chatHistory = [];
+                chatHistory.push({ role: "user", parts: [{ text: prompt }] });
+                const payload = { contents: chatHistory };
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                const result = await response.json();
+
+                if (result.candidates && result.candidates.length > 0 &&
+                    result.candidates[0].content && result.candidates[0].content.parts &&
+                    result.candidates[0].content.parts.length > 0) {
+                    const text = result.candidates[0].content.parts[0].text;
+                    outputElement.textContent = text;
+                } else {
+                    outputElement.textContent = "Error: Could not generate response. Please try again.";
+                    console.error("Gemini API response structure unexpected:", result);
+                }
+            } catch (error) {
+                outputElement.textContent = `Error: ${error.message}. Please check your input or try again.`;
+                console.error("Error calling Gemini API:", error);
+            } finally {
+                textElement.classList.remove('hidden'); // Show text
+                spinnerElement.classList.add('hidden'); // Hide spinner
+            }
+        }
+
+        // Event Listener for Code Explainer
+        explainCodeBtn.addEventListener('click', () => {
+            const code = codeInput.value.trim();
+            if (code) {
+                const prompt = `Explain the following code snippet in simple terms, suitable for a computer science student. Also, suggest any obvious improvements if applicable:\n\n\`\`\`\n${code}\n\`\`\``;
+                callGeminiAPI(prompt, codeExplanationOutput, explainCodeText, explainCodeSpinner);
+            } else {
+                codeExplanationOutput.textContent = "Please enter some code to explain.";
+            }
+        });
+
+        // Event Listener for Project Idea Generator
+        generateProjectBtn.addEventListener('click', () => {
+            const keywords = projectKeywordsInput.value.trim();
+            if (keywords) {
+                const prompt = `Generate 3-5 beginner-friendly computer science project ideas based on the following keywords/interests: "${keywords}". For each idea, provide a brief description and suggest a primary programming language/technology.`;
+                callGeminiAPI(prompt, projectIdeasOutput, generateProjectText, generateProjectSpinner);
+            } else {
+                projectIdeasOutput.textContent = "Please enter some keywords or interests to generate project ideas.";
+            }
+        });
+
+        // Event Listener for Concept Explainer
+        explainConceptBtn.addEventListener('click', () => {
+            const concept = conceptInput.value.trim();
+            if (concept) {
+                const prompt = `Explain the computer science concept "${concept}" in simple, easy-to-understand terms for a student. Provide a brief example if possible.`;
+                callGeminiAPI(prompt, conceptExplanationOutput, explainConceptText, explainConceptSpinner);
+            } else {
+                conceptExplanationOutput.textContent = "Please enter a concept to explain.";
+            }
+        });
+    </script>
+
+</body>
+</html>
